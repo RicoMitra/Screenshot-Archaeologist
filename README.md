@@ -30,6 +30,14 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Deployment
+Push the repository to GitHub.
+In Vercel, choose Add New Project and import the repository.
+Keep the detected Next.js defaults.
+No environment variables are required.
+Deploy on the Hobby plan.
+Production URL: [https://decisionos-three.vercel.app/](https://screenshot-archaeologist-omega.vercel.app/)
+
 ## Quality Checks
 
 ```bash
