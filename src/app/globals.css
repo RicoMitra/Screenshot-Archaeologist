@@ -1,0 +1,89 @@
+@import "@fontsource/geist/400.css";
+@import "@fontsource/geist/500.css";
+@import "@fontsource/geist/600.css";
+@import "@fontsource/geist-mono/400.css";
+@import "@fontsource/geist-mono/600.css";
+@import "tailwindcss";
+
+:root {
+  --bg: oklch(0.145 0.01 255);
+  --fg: oklch(0.94 0.006 82);
+  --muted: oklch(0.72 0.018 255);
+  --panel: oklch(0.19 0.012 255 / 0.88);
+  --panel-strong: oklch(0.235 0.014 255 / 0.95);
+  --field: oklch(0.15 0.01 255 / 0.72);
+  --chip: oklch(0.235 0.014 255 / 0.78);
+  --track: oklch(0.29 0.015 255);
+  --border: oklch(0.31 0.016 255);
+  --accent: oklch(0.72 0.13 76);
+  --accent-strong: oklch(0.77 0.14 76);
+  --accent-soft: oklch(0.72 0.13 76 / 0.44);
+  --accent-ink: oklch(0.17 0.018 76);
+  --success: oklch(0.64 0.12 152);
+  --danger: oklch(0.69 0.12 22);
+  --danger-bg: oklch(0.25 0.035 22 / 0.38);
+  --danger-bg-strong: oklch(0.3 0.045 22 / 0.52);
+  --danger-border: oklch(0.55 0.08 22 / 0.45);
+  --ring: oklch(0.72 0.13 76 / 0.72);
+}
+
+@theme inline {
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Geist", sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.archive-texture {
+  background:
+    radial-gradient(circle at 18% 14%, oklch(0.72 0.13 76 / 0.11), transparent 28%),
+    linear-gradient(115deg, transparent 0 48%, oklch(0.72 0.13 76 / 0.04) 48% 49%, transparent 49% 100%),
+    repeating-linear-gradient(0deg, oklch(0.95 0.006 82 / 0.028) 0 1px, transparent 1px 8px);
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
